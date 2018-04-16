@@ -49,6 +49,7 @@ public class Servlet_TbUser extends HttpServlet {
 				delete(request, response);
 			} 
 			else if("queryAll".equals(type)){
+//				queryAll(request,response);
 				queryAll(request, response);
 			} 
 	}
@@ -66,7 +67,7 @@ public class Servlet_TbUser extends HttpServlet {
 		
 		 try {
 			//下面两句是把 string 转换为  sql类型的 时间格式
-			 SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd"); 
+			 SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
 			user.setBirthday(new Date(sdf.parse(birthday).getTime()));
 		} catch (ParseException e1) { 
 			e1.printStackTrace();
@@ -89,7 +90,7 @@ public class Servlet_TbUser extends HttpServlet {
 		 else {
 			 message="新增失败!!!";
 			 request.setAttribute("msg", message);
-				request.getRequestDispatcher("/index.jsp").forward(request, response); 
+			 request.getRequestDispatcher("/index.jsp").forward(request, response);
 		}
 		
 		

@@ -127,8 +127,10 @@ public class ITb_UserImpI implements ITb_User {
 		Tb_User user = null;
 		if (id > 0) {
 			try {
+
 				ps = conn1.prepareStatement(sql);
 				ps.setInt(1, id);
+//				ps= conn1.prepareStatement(sql);
 				rs = ps.executeQuery();
 				if (rs.next()) {
 					user = new Tb_User();

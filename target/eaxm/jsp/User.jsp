@@ -28,7 +28,7 @@
 
 <body>
 	<div align="center"
-		style="width: 400px; position: relative;left:450px">
+		style="width: 400px; position: relative;left:450px" color="red">
 		<form action="${url}/fan/Servlet_TbUser?who=Insert" method="post">
 			<h4>新增用户</h4>
 			姓名: <input type="text" name="name"><br />
@@ -49,7 +49,7 @@
 		         <thead>
 		          <tr><td>ID</td><td>姓名</td><td>密码</td><td>日期</td><td>性别</td><td>操作</td></tr>
 		         </thead>
-		         <tbody>
+				<tbody>
          <c:forEach items="${list}" var="list">
          <tr>
                 <td>${list.id }</td>
